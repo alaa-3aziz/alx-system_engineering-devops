@@ -1,8 +1,2 @@
 #!/bin/bash
-
-while IFS= read -r line; do
-    first_letter=$(echo "$line" | cut -c 1)
-    decoded_message+="$first_letter"
-done
-
-echo "$decoded_message"
+cut -c 1 | paste -s -d ''
